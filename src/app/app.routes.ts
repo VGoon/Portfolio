@@ -5,6 +5,7 @@ import { Contact } from './pages/contact/contact';
 import { About } from './pages/about/about';
 import { Learning } from './pages/learning/learning';
 import { DataScience } from './pages/data-science/data-science';
+import { Admin } from './pages/admin/admin';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'contact', component: Contact },
     { path: 'about', component: About },
     { path: 'learning', component: Learning },
-    { path: 'data-science', component: DataScience }
+    { path: 'data-science', component: DataScience },
+    { path: 'admin', component: Admin }
 ]

@@ -6,12 +6,12 @@
       Contact Me
     </h1>
 
-    <form class="space-y-6">
+   <form (ngSubmit)="submitForm()" class="space-y-6">
 
       <!-- Name -->
       <div>
         <label class="block mb-2 text-gray-300">Name</label>
-        <input 
+        <input [(ngModel)]="name" name="name"
           type="text" 
           class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-600"
         />
@@ -20,7 +20,7 @@
       <!-- Email -->
       <div>
         <label class="block mb-2 text-gray-300">Email</label>
-        <input 
+        <input [(ngModel)]="email" name="email"
           type="email" 
           class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-600"
         />
@@ -29,7 +29,7 @@
       <!-- Message -->
       <div>
         <label class="block mb-2 text-gray-300">Message</label>
-        <textarea 
+        <textarea [(ngModel)]="message" name="message"
           rows="5"
           class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-purple-600"
         ></textarea>

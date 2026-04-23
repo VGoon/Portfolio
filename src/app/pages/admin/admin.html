@@ -1,0 +1,38 @@
+<div class="min-h-screen bg-black text-white px-6 py-16">
+
+  <div class="max-w-4xl mx-auto">
+
+    <h1 class="text-3xl font-bold mb-8 text-center">
+      Admin Panel
+    </h1>
+
+    <!-- FORM -->
+    <div class="bg-gray-900 p-6 rounded-xl mb-10">
+
+      <input [(ngModel)]="title" placeholder="Title" class="w-full mb-3 p-2 bg-gray-800 rounded" />
+      <input [(ngModel)]="description" placeholder="Description" class="w-full mb-3 p-2 bg-gray-800 rounded" />
+      <input [(ngModel)]="techInput" placeholder="Tech (comma separated)" class="w-full mb-3 p-2 bg-gray-800 rounded" />
+
+      <button (click)="addProject()" class="bg-purple-600 px-4 py-2 rounded">
+        Add Project
+      </button>
+
+    </div>
+
+    <!-- LIST -->
+    <div *ngFor="let project of projects" class="bg-gray-900 p-4 rounded mb-4 flex justify-between">
+
+      <div>
+        <h2 class="font-semibold">{{ project.title }}</h2>
+        <p class="text-gray-400">{{ project.description }}</p>
+      </div>
+
+      <button (click)="deleteProject(project.title)" class="text-red-400">
+        Delete
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
